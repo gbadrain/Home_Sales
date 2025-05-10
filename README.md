@@ -28,9 +28,20 @@ This repository contains a Spark-based data analysis project focused on home sal
   GROUP BY year_sold
   ORDER BY year_sold;
   ```
+  ![alt text](<Screenshot 2025-05-10 at 10.19.13 AM.png>)
+
 * **Homes with 3 beds, 3 baths per build year**
+  
+     ![alt text](<Screenshot 2025-05-10 at 10.19.46 AM.png>)
+
 * **Homes with 3 beds, 3 baths, 2 floors, ≥ 2000 sqft per build year**
+
+     ![alt text](<Screenshot 2025-05-10 at 10.21.40 AM.png>)
+
 * **Average price per view rating (≥ $350,000)**
+* 
+  ![alt text](<Screenshot 2025-05-10 at 10.23.17 AM.png>)![alt text](<Screenshot 2025-05-10 at 10.24.25 AM.png>)
+
 
 ### 3. Performance Optimization
 * **Caching the temporary table**
@@ -44,6 +55,13 @@ This repository contains a Spark-based data analysis project focused on home sal
   ```python
   spark.sql("UNCACHE TABLE home_sales")
   ```
+![alt text](<Screenshot 2025-05-10 at 10.25.02 AM.png>) ![alt text](<Screenshot 2025-05-10 at 10.25.24 AM-2.png>)
+
+  **Analysis**
+The highest view rating (100) corresponds to an average price of $1,026,669.50.
+Other view ratings range from $695,865.58 to $798,684.82, indicating that homes with better views tend to have higher price points.
+The runtime of 0.936 seconds suggests that caching has improved query efficiency.
+
 * **Check cache status:**
   ```python
   spark.catalog.isCached("home_sales")
@@ -97,17 +115,21 @@ pip install pyspark
 * **PySpark Documentation**
 * **Microsoft Copilot** for troubleshooting
 * **UO Boot Camp resources** on **Big Data Resources**
-Recommended Book: High Performance Spark
-Apache Spark Performance Tuning
-Best practices to to optimizing query performance 
-Parquet and Partitioning Best Practices
+
+*Recommended Book: High Performance Spark*  
+Apache Spark Performance Tuning  
+Best practices to optimizing query performance  
+Parquet and Partitioning Best Practices  
+
 
 ## Acknowledgments
 Special thanks to the **University of Oregon Data Analytics Boot Camp** for providing the structured learning path for **PySpark analysis** and **SQL query optimization**.
 
 ## Contact
-**Gurpreet Singh Badrain**
-* **Role:** Math Teacher & Aspiring Data Analyst
-* **GitHub:** gbadrain
-* **LinkedIn:** Gurpreet Badrain
-* **Email:** gbadrain@gmail.com
+
+* **Name**: Gurpreet Singh Badrain
+* **Role**: Market Research Analyst & Aspiring Data Analyst
+* **GitHub**: https://github.com/gbadrain
+* **LinkedIn**: http://linkedin.com/in/gurpreet-badrain-b258a0219
+* **Email**: gbadrain@gmail.com
+
