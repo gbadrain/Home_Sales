@@ -1,4 +1,5 @@
 # Home Sales Analysis using SparkSQL
+![PySpark-Tutorial_Watermarked 305db668c8cb jpg](https://github.com/user-attachments/assets/7b9d178e-c6fc-4d04-9328-85af9ea40480)
 
 ## Overview
 This repository contains a Spark-based data analysis project focused on home sales data. Using **PySpark**, the project evaluates trends in **home pricing, views, and other key metrics** by leveraging SQL queries, caching strategies, and partitioning for performance improvements.
