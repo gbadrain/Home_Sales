@@ -56,7 +56,6 @@ This repository contains a Spark-based data analysis project focused on home sal
 
 * **Partitioning parquet data & verifying performance improvements**
 
-### 4. Uncaching & Validation
 * **Uncache table:**
   ```python
   spark.sql("UNCACHE TABLE home_sales")
@@ -67,7 +66,7 @@ This repository contains a Spark-based data analysis project focused on home sal
 
 
 
-  **Analysis**
+ * **Analysis**
 The query logic remains consistent, successfully filtering views where avgPrice >= 350000.
 
 Caching vs. Non-Caching Comparison:
