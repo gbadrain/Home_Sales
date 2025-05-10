@@ -67,15 +67,15 @@ This repository contains a Spark-based data analysis project focused on home sal
 
 
  * **Analysis**
-The query logic remains consistent, successfully filtering views where avgPrice >= 350000.
+    The query logic remains consistent, successfully filtering views where avgPrice >= 350000.
 
-Caching vs. Non-Caching Comparison:
+    *Caching vs. Non-Caching Comparison:*
 
-Prior cached execution: 0.67 seconds
+    Prior cached execution: **0.67 seconds**
 
-Latest execution: 0.82 seconds
+    Latest execution: **0.82 seconds**
 
-While slightly slower, it's still in the optimized range compared to earlier non-cached runs.
+    While slightly slower, it's still in the optimized range compared to earlier non-cached runs.
 
 * **Check cache status:**
   ```python
