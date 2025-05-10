@@ -28,19 +28,21 @@ This repository contains a Spark-based data analysis project focused on home sal
   GROUP BY year_sold
   ORDER BY year_sold;
   ```
-  ![alt text](<Screenshot 2025-05-10 at 10.19.13 AM.png>)
+![Screenshot 2025-05-10 at 10 19 13 AM](https://github.com/user-attachments/assets/6f98a1e4-32ca-4192-bdbc-5e9bebd63386)
 
 * **Homes with 3 beds, 3 baths per build year**
   
-     ![alt text](<Screenshot 2025-05-10 at 10.19.46 AM.png>)
+![Screenshot 2025-05-10 at 10 19 46 AM](https://github.com/user-attachments/assets/b22112a9-68cf-4ec9-9728-54c1f958385b)
 
 * **Homes with 3 beds, 3 baths, 2 floors, ≥ 2000 sqft per build year**
+  
+![Screenshot 2025-05-10 at 10 21 40 AM](https://github.com/user-attachments/assets/20381bd2-8aa1-4ee1-b1b5-c8f02a4c7a6a)
 
-     ![alt text](<Screenshot 2025-05-10 at 10.21.40 AM.png>)
 
 * **Average price per view rating (≥ $350,000)**
-* 
-  ![alt text](<Screenshot 2025-05-10 at 10.23.17 AM.png>)![alt text](<Screenshot 2025-05-10 at 10.24.25 AM.png>)
+
+![Screenshot 2025-05-10 at 11 25 09 AM](https://github.com/user-attachments/assets/12de8977-53b9-471a-8b03-4c3b8f584785)
+![Screenshot 2025-05-10 at 11 25 30 AM](https://github.com/user-attachments/assets/9b25f3b4-bde1-44e1-8d43-5eec98a754be)
 
 
 ### 3. Performance Optimization
@@ -48,6 +50,9 @@ This repository contains a Spark-based data analysis project focused on home sal
   ```python
   spark.sql("CACHE TABLE home_sales")
   ```
+  ![Screenshot 2025-05-10 at 11 29 28 AM](https://github.com/user-attachments/assets/c31a01fb-99b4-4231-bbdb-151b8707157f)
+  ![Screenshot 2025-05-10 at 11 30 02 AM](https://github.com/user-attachments/assets/5288a711-14ca-42b1-afb7-dd53f85dc352)
+
 * **Partitioning parquet data & verifying performance improvements**
 
 ### 4. Uncaching & Validation
@@ -55,12 +60,22 @@ This repository contains a Spark-based data analysis project focused on home sal
   ```python
   spark.sql("UNCACHE TABLE home_sales")
   ```
-![alt text](<Screenshot 2025-05-10 at 10.25.02 AM.png>) ![alt text](<Screenshot 2025-05-10 at 10.25.24 AM-2.png>)
+  ![Screenshot 2025-05-10 at 11 46 42 AM](https://github.com/user-attachments/assets/15027e44-1269-4eba-aa81-4a65ddbfbdcd)
+  ![Screenshot 2025-05-10 at 11 47 21 AM](https://github.com/user-attachments/assets/83ce0538-e08c-40f4-b51f-0d3f6d391ec1)
+
+
+
 
   **Analysis**
-The highest view rating (100) corresponds to an average price of $1,026,669.50.
-Other view ratings range from $695,865.58 to $798,684.82, indicating that homes with better views tend to have higher price points.
-The runtime of 0.936 seconds suggests that caching has improved query efficiency.
+The query logic remains consistent, successfully filtering views where avgPrice >= 350000.
+
+Caching vs. Non-Caching Comparison:
+
+Prior cached execution: 0.67 seconds
+
+Latest execution: 0.82 seconds
+
+While slightly slower, it's still in the optimized range compared to earlier non-cached runs.
 
 * **Check cache status:**
   ```python
