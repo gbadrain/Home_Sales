@@ -146,5 +146,5 @@ Special thanks to the **University of Oregon Data Analytics Boot Camp** for prov
 * **Role**: Market Research Analyst & Aspiring Data Analyst
 * **GitHub**: https://github.com/gbadrain
 * **LinkedIn**: http://linkedin.com/in/gurpreet-badrain-b258a0219
-* **Email**: gbadrain@gmail.com
+* **Email**: gbadrain@gmail.com 
 
